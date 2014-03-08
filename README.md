@@ -1,11 +1,28 @@
 # About
 
-This repo is an X-Tag custom web-component stub that can be used as a starting point when building new elements.  It provides that basic tools and grunt tasks to get started.
+This is an experimental web component (using [x-tags](https://github.com/x-tag/core)). I'm mostly playing with the technology, but if I am doing it right, this will end up allowing you to create a meme on the fly.
+
+# Use
+Include the CSS and JS files in your project:
+
+```
+<link rel="stylesheet" type="text/css" href="x-meme/main.css"/>
+<script type="text/javascript" src="x-meme/main.js"></script>
+```
+
+And use the web component according to the API description below. For example:
+
+```
+<x-meme type="futurama-fry">
+    <p>can't tell if satire</p>
+    <p>or election year</p>
+</x-meme>
+```
 
 # Dev Setup
 
 ```
-Fork this repo, rename it, then clone it.
+Clone this repo.
 
 $ npm install	// install bower tasks
 $ bower install	// install components
@@ -13,12 +30,10 @@ $ grunt build   // build the dependencies
 
 ```
 
-# Links
+# License
 
-[X-Tags Docs](http://x-tags.org/docs)
+This program is free software; it is distributed under an [MIT License](./LICENSE).
 
-[Guide for creating X-Tag Components](https://github.com/x-tag/core/wiki/Creating-X-Tag-Components)
+---
 
-[Using X-Tag components in your applications](https://github.com/x-tag/core/wiki/Using-our-Web-Components-in-Your-Application)
-
-
+Copyright (c) 2014 Fred Wenzel.
