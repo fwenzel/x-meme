@@ -2,7 +2,7 @@ x-meme {
   display: block;
 }
 
-x-meme div {
+x-meme > div {
     display: inline-block;
     position: relative;
 }
@@ -12,7 +12,8 @@ x-meme img {
     top: 0;
 }
 
-x-meme p {
+x-meme header,
+x-meme footer {
     color: white;
     font-family: Impact, Arial, sans-serif;
     font-size: 36pt;
@@ -24,9 +25,9 @@ x-meme p {
     width: 100%;
 }
 
-x-meme p:nth-child(2) {
+x-meme header {
     top: 0;
 }
-x-meme p:nth-child(3) {
+x-meme footer {
     bottom: 0;
 }
