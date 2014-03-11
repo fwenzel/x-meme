@@ -24,14 +24,12 @@
       inserted: function() {
         if (!(this.hasAttribute('type') && this.getAttribute('type') == 'futurama-fry')) return;
         this.xtag.img.src = 'http://www.quickmeme.com/memes/334.jpg';
-      },
-
-      removed: function() {},
-      attributeChanged: function() {}
+      }
     },
+
     events: {
-
     },
+
     accessors: {
       header: {
         attribute: {},
@@ -48,8 +46,8 @@
         }
       }
     },
-    methods: {
 
+    methods: {
     }
   });
 
