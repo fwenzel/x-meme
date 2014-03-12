@@ -1,7 +1,9 @@
 (function(){
   var memes = [
     'futurama-fry',
-    'firstworldproblems'
+    'firstworldproblems',
+    'scumbagsteve',
+    'successkid'
   ];
 
   xtag.register('x-meme', {
