@@ -1,4 +1,8 @@
 (function(){
+  var memes = [
+    'futurama-fry',
+    'firstworldproblems'
+  ];
 
   xtag.register('x-meme', {
     lifecycle: {
@@ -19,11 +23,6 @@
         });
 
         this.appendChild(container);
-      },
-
-      inserted: function() {
-        if (!(this.hasAttribute('type') && this.getAttribute('type') == 'futurama-fry')) return;
-        this.xtag.img.src = 'http://www.quickmeme.com/memes/334.jpg';
       }
     },
 
@@ -43,6 +42,17 @@
 
         set: function(text) {
           this.xtag.footer.textContent = text;
+        }
+      },
+      type: {
+        attribute: {},
+
+        set: function(memetype) {
+          if (memes.indexOf(memetype) >= 0) {  // Valid meme.
+            this.xtag.img.src = 'http://fwenzel.github.io/x-meme/img/' + memetype + '.jpg';
+          } else {
+            this.xtag.img.src = '';
+          }
         }
       }
     },
