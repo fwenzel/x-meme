@@ -1,7 +1,10 @@
 (function(){
   var memes = [
+    'badluckbrian',
+    'condescending-wonka',
     'futurama-fry',
     'firstworldproblems',
+    'overly-manly-man',
     'scumbagsteve',
     'successkid'
   ];
