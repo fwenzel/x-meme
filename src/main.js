@@ -24,7 +24,6 @@
           var captElem = document.createElement(caption);
           container.appendChild(captElem);
           xtag[caption] = captElem;
-          console.log(xtag);
         });
 
         this.appendChild(container);
@@ -49,13 +48,22 @@
           this.xtag.footer.textContent = text;
         }
       },
+      src: {
+        attribute: {},
+
+        set: function(src) {
+          this.setAttribute('type', 'custom');
+          this.xtag.img.src = src;
+        }
+      },
       type: {
         attribute: {},
 
         set: function(memetype) {
           if (memes.indexOf(memetype) >= 0) {  // Valid meme.
-            this.xtag.img.src = 'http://fwenzel.github.io/x-meme/img/' + memetype + '.jpg';
-          } else {
+            this.removeAttribute('src');
+            this.xtag.img.src = 'http://fwenzel.github.io/x-meme/img/memes/' + memetype + '.jpg';
+          } else if (memetype !== 'custom') {
             this.xtag.img.src = '';
           }
         }
