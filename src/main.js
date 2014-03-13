@@ -1,13 +1,16 @@
 (function(){
-  var memes = [
-    'bad-luck-brian',
-    'condescending-wonka',
-    'futurama-fry',
-    'first-world-problems',
-    'overly-manly-man',
-    'scumbag-steve',
-    'success-kid'
-  ];
+  var memes = {
+    'bad-luck-brian': {},
+    'condescending-wonka': {},
+    'futurama-fry': {},
+    'first-world-problems': {},
+    'homer-simpson-bush': {
+      filetype: 'gif'
+    },
+    'overly-manly-man': {},
+    'scumbag-steve': {},
+    'success-kid': {}
+  };
 
   xtag.register('x-meme', {
     lifecycle: {
@@ -28,9 +31,6 @@
 
         this.appendChild(container);
       }
-    },
-
-    events: {
     },
 
     accessors: {
@@ -60,18 +60,17 @@
         attribute: {},
 
         set: function(memetype) {
-          if (memes.indexOf(memetype) >= 0) {  // Valid meme.
+          if (memes[memetype]) {  // Valid meme.
+            var ext = memes[memetype]['filetype'] || 'jpg';
             this.removeAttribute('src');
-            this.xtag.img.src = 'http://fwenzel.github.io/x-meme/img/memes/' + memetype + '.jpg';
+            this.xtag.img.src = 'http://fwenzel.github.io/x-meme/img/memes/' + memetype + '.' + ext;
           } else if (memetype !== 'custom') {
             this.xtag.img.src = '';
           }
         }
       }
-    },
-
-    methods: {
     }
+
   });
 
 })();
