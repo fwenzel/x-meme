@@ -1,12 +1,12 @@
 (function(){
   var memes = [
-    'badluckbrian',
+    'bad-luck-brian',
     'condescending-wonka',
     'futurama-fry',
-    'firstworldproblems',
+    'first-world-problems',
     'overly-manly-man',
-    'scumbagsteve',
-    'successkid'
+    'scumbag-steve',
+    'success-kid'
   ];
 
   xtag.register('x-meme', {
