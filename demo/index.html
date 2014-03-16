@@ -10,7 +10,9 @@
     <script type="text/javascript" src="x-tag-components.js"></script>
     <script type="text/javascript" src="../src/main.js"></script>
 	<style>
-
+        x-doge:not([type=custom]) {
+            width: 600px;
+        }
 	</style>
 </head>
 
@@ -35,6 +37,14 @@
     <x-meme type="success-kid" header="left late for work" footer="all green lights"></x-meme>
 
     <x-meme type="custom" src="http://fwenzel.github.io/x-meme/img/custom-example.jpg" header="a custom meme" footer="how original"></x-meme>
+
+
+    <h2>X-Doge Demo</h2>
+
+    <x-doge phrases="very alarm|such awake|much morning|so cereal|wow"></x-doge>
+
+    <x-doge type="custom" src="http://fwenzel.github.io/x-meme/img/custom-example.jpg" phrases="so x-tag|much custom|such HTML5|amaze"></x-doge>
+
 </body>
 
 </html>
